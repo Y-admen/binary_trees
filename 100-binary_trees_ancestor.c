@@ -26,7 +26,7 @@ const binary_tree_t *second)
 				return ((binary_tree_t *) current1);
 			current2 = current2->parent;
 		}
-		current2 = second->parent;
+		current2 = second;
 		current1 = current1->parent;
 	}
 	return (NULL);
