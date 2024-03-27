@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * bst_search - Searches for a node with the given value in the binary search tree.
+ * bst_search - Searches for node value in binary search tree.
  * @tree: a pointer to the root node of the tree to search
  * @value: The value to be searched for
  * Return: a pointer to the node if found, otherwise NULL.
