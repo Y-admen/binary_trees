@@ -9,7 +9,8 @@ int get_nodes_count(const binary_tree_t *tree)
 {
 	if (!tree)
 		return (0);
-	return (1 + get_nodes_count(tree->left) + get_nodes_count(tree->right));
+	else
+		return (1 + get_nodes_count(tree->left) + get_nodes_count(tree->right));
 }
 /**
  * is_complete - Checks if a binary tree is complete
@@ -28,6 +29,8 @@ int is_complete(const binary_tree_t *tree, int index, int number_nodes)
 	if (!tree)
 		return (1);
 	if (index >= number_nodes)
+		return (0);
+	if (!tree->left && tree->right)
 		return (0);
 	left_complete = is_complete(tree->left, 2 * index + 1, number_nodes);
 	right_complete = is_complete(tree->right, 2 * index + 2, number_nodes);
